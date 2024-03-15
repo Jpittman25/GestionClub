@@ -1,5 +1,6 @@
 @extends("layouts.master")
-@section("content")
+
+@section('content')
 
 <x-guest-layout>
     <form method="POST" action="{{ route('register') }}">
@@ -53,5 +54,6 @@
         </div>
     </form>
 </x-guest-layout>
+
 
 @endsection

@@ -37,10 +37,10 @@
                             <li><a class="dropdown-item  bi bi-person-fill" href="{{ route('users.edit', \Illuminate\Support\Facades\Auth::user()) }}">Profil</a></li>
 
                             @if(Auth::user()->admin)
-                                {{--                                <form action="{{ route('dashboard') }}" method="post">--}}
-                                {{--                                    @csrf--}}
-                                {{--                                    <button type="submit" class="dropdown-item" href="{{ route('dashboard') }}">Dashboard</button>--}}
-                                {{--                                </form>--}}
+{{--                                <form action="{{ route('dashboard') }}" method="post">--}}
+{{--                                    @csrf--}}
+{{--                                    <button type="submit" class="dropdown-item" href="{{ route('dashboard') }}">Dashboard</button>--}}
+{{--                                </form>--}}
                                 <a href="{{ route('dashboard') }}" class="dropdown-item">Dashboard</a>
                             @endif
 
