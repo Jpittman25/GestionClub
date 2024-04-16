@@ -8,6 +8,7 @@
 
     <div class="carousel-inner">
 
+<<<<<<< HEAD
 {{--        <div class="carousel-item active">--}}
 {{--            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>--}}
 
@@ -47,6 +48,18 @@
 {{--        V2--}}
         <div class="carousel-item active">
             <img src="{{asset('img/image2.jpg')}}" class="img">
+=======
+        <div class="carousel-item active">
+            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+
+            <div class="container">
+                <div class="carousel-caption text-start">
+                    <h1>Example headline.</h1>
+                    <p>Some representative placeholder content for the first slide of the carousel.</p>
+                    <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
+                </div>
+            </div>
+>>>>>>> 5f93aa79d2ebe655e07e3bc101b3ad655d98efa0
         </div>
 
         <div class="carousel-item">

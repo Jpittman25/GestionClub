@@ -34,6 +34,7 @@
                     @enderror
                 </div>
 
+<<<<<<< HEAD
                 <div class="flex justify-start sm:justify-end py-2">
             <input type="submit" class="cursor-pointer inline-flex items-center px-4 py-2 border border-gray-400 shadow-sm text-base font-medium rounded-md text-gray-700 bg-white" value="Modifier">
 
@@ -43,11 +44,28 @@
                 <input type="submit" class="cursor-pointer inline-flex items-center px-4 py-2 border border-gray-400 shadow-sm text-base font-medium rounded-md text-gray-700 bg-white" value="Supprimer">
             </form>
         </div>
+=======
+                <div class="py-2">
+                    <input type="submit" class="cursor-pointer inline-flex items-center w-1/4 py-4 border border-gray-400 shadow-sm text-base font-medium rounded-md text-gray-700 bg-white justify-center" value="Modifier">
+
+                </div>
+
+>>>>>>> 5f93aa79d2ebe655e07e3bc101b3ad655d98efa0
 
             </div>
         </form>
 
+<<<<<<< HEAD
 
+=======
+        <form action="{{ route('users.destroy', $user) }}" method="POST" class="mx-auto py-2 px-4">
+            @csrf
+            @method('Delete')
+            <input type="submit" class="cursor-pointer inline-flex
+items-center w-1/4 py-4 border border-gray-400 shadow-sm text-base font-medium rounded-md text-gray-700 bg-white justify-center" value="Supprimer">
+
+        </form>
+>>>>>>> 5f93aa79d2ebe655e07e3bc101b3ad655d98efa0
 
     </div>
 @endsection

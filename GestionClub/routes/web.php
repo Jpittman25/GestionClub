@@ -31,7 +31,11 @@ Route::get('/index', function () {
 
 Route::get('/dashboard', function () {
     return view('dashboard');
+<<<<<<< HEAD
 })->middleware(['admin'])->name('dashboard');
+=======
+})->middleware(['admin', 'verified'])->name('dashboard');
+>>>>>>> 5f93aa79d2ebe655e07e3bc101b3ad655d98efa0
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
