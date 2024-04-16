@@ -3,9 +3,6 @@
   <component name="PHPUnit">
     <option name="directories">
       <list>
-        <option value="$PROJECT_DIR$/GestionClubOld/tests/Unit" />
-        <option value="$PROJECT_DIR$/GestionClubOld/tests/Feature" />
-        <option value="$PROJECT_DIR$/tests" />
         <option value="$PROJECT_DIR$/GestionClub/tests/Unit" />
         <option value="$PROJECT_DIR$/GestionClub/tests/Feature" />
       </list>

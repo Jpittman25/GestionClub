@@ -7,10 +7,6 @@
                     href="https://lycee2pirae.com/" target="_blank">
                     <b>Lycée Diadème, Te Tara O Maiao (Pirae)</b></a>
             </div>
-            <div class="container-fluid text-center"><a
-                    href="/mentionLegale" target="_blank">
-                    <b>Mentions Légales</b></a>
-            </div>
         </div>
     </div>
 </footer>

@@ -7,7 +7,7 @@
           <option name="path" value="$PROJECT_DIR$/tests" />
         </Configuration>
         <Configuration>
-          <option name="path" value="$PROJECT_DIR$/tests" />
+          <option name="path" value="$PROJECT_DIR$/GestionClub/tests" />
         </Configuration>
       </list>
     </option>

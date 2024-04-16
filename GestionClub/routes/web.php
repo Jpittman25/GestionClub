@@ -1,8 +1,8 @@
 <?php
 
-use App\Http\Controllers\IndexController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\IndexController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,15 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('bienvenue');
-});
-
 Route::get('/', [IndexController::class, 'index']);
-
-Route::get('/accueil', function () {
-    return view('/bienvenue');
-});
 
 Route::get('/apropos', function () {
     return view('/pages/apropos');
@@ -33,8 +25,13 @@ Route::get('/contact', function () {
     return view('/pages/contact');
 });
 
-Route::get('/dashboard', function () {return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/index', function () {
+    return view('/bienvenue');
+});
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['admin'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -42,20 +39,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__ . '/auth.php';
-
-Route::get('/users', [\App\Http\Controllers\UsersController::class, 'index'])->middleware(['auth',
-    'admin'])->name('users');
-
-Route::delete('/users/{id}', [\App\Http\Controllers\UsersController::class,
-    'destroy'])->middleware(['auth', 'admin'])->name('users.destroy');
-
-
-Route::get('/dashboard', function () { return view('dashboard');} )
-    ->middleware(['auth'])->name('dashboard');
-
-Route::get('/users', [\App\Http\Controllers\UsersController::class, 'index'])->middleware(['auth',
-    'admin'])->name('users');
+Route::get('/users', [\App\Http\Controllers\UsersController::class, 'index'])->middleware(['auth', 'admin'])->name('users');
 
 Route::get('/users/profile/{user}', [\App\Http\Controllers\UsersController::class, 'show'])
     ->name('users.show');
@@ -63,8 +47,14 @@ Route::get('/users/profile/{user}', [\App\Http\Controllers\UsersController::clas
 Route::get('/users/{user}', [\App\Http\Controllers\UsersController::class, 'edit'])
     ->middleware(['auth'])->name('users.edit');
 
+//Route::get('/users/{user}', [\App\Http\Controllers\UsersController::class, 'edit'])->name('users.edit');
+
 Route::put('/users/{user}', [\App\Http\Controllers\UsersController::class, 'update'])
     ->middleware(['auth'])->name('users.update');
 
 Route::delete('/users/{user}', [\App\Http\Controllers\UsersController::class, 'destroy'])
-    ->middleware(['auth', 'admin'])->name('users.destroy');
+    ->middleware(['auth','verified', 'admin'])->name('users.destroy');
+
+
+require __DIR__.'/auth.php';
+

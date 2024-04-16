@@ -2,10 +2,11 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light p-3">
     <div class="container-fluid">
 
-        <a class="navbar-brand" href="/">
-            <img src="{{asset('img/rameur.png')}}" alt="" width="50px" height="50px">
-            Gestion club
-        </a>
+    <a class="navbar-brand" href="/" style="display: inline-block;">
+    <img src="{{asset('img/rameur.png')}}" alt="" width="50px" height="50px" style="display: inline-block;">
+    <span style="display: inline-block; vertical-align: middle;">Gestion Club</span>
+</a>
+
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -37,16 +38,16 @@
                             <li><a class="dropdown-item  bi bi-person-fill" href="{{ route('users.edit', \Illuminate\Support\Facades\Auth::user()) }}">Profil</a></li>
 
                             @if(Auth::user()->admin)
-                                {{--                                <form action="{{ route('dashboard') }}" method="post">--}}
-                                {{--                                    @csrf--}}
-                                {{--                                    <button type="submit" class="dropdown-item" href="{{ route('dashboard') }}">Dashboard</button>--}}
-                                {{--                                </form>--}}
+{{--                                <form action="{{ route('dashboard') }}" method="post">--}}
+{{--                                    @csrf--}}
+{{--                                    <button type="submit" class="dropdown-item" href="{{ route('dashboard') }}">Dashboard</button>--}}
+{{--                                </form>--}}
                                 <a href="{{ route('dashboard') }}" class="dropdown-item">Dashboard</a>
                             @endif
 
                             <form action="{{ route('logout') }}" method="post">
                                 @csrf
-                                <button type="submit" class="dropdown-item" href="{{ route('logout') }}">Logout</button>
+                                <button type="submit" class="dropdown-item" href="{{ route('logout') }}">Déconnexion</button>
                             </form>
 
                         @else
